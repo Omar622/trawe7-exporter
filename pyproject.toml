@@ -1,0 +1,13 @@
+
+[project]
+name = "traweeh_cutter"
+version = "0.1.0"
+description = "Taraweeh Cutter: Simple desktop app for cutting and exporting Taraweeh prayer recordings."
+authors = ["Omar <omaramin622@gmail.com>"]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "ffmpeg-python"
+]
+
+[tool.uv]
