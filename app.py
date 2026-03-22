@@ -15,4 +15,13 @@ if __name__ == '__main__':
     main_window = MainWindow(None, LANG)
     controller = AppController(main_window, logic_audio_analyzer, logic_audio_processor, LANG)
     main_window.controller = controller
+
+    # Wire callbacks to the controller after UI exists
+    if hasattr(main_window, 'import_btn'):
+        main_window.import_btn.configure(command=controller.on_import_files)
+    if hasattr(main_window, 'lang_btn_en'):
+        main_window.lang_btn_en.configure(command=lambda: controller.on_language_change('en'))
+    if hasattr(main_window, 'lang_btn_ar'):
+        main_window.lang_btn_ar.configure(command=lambda: controller.on_language_change('ar'))
+
     main_window.mainloop()
