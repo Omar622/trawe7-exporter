@@ -2,7 +2,7 @@ import os
 from typing import List
 
 # Supported audio file extensions (lowercase, with dot)
-SUPPORTED_AUDIO_EXTENSIONS = ('.mp3', '.wav')
+SUPPORTED_AUDIO_EXTENSIONS = ('.mp3', '.wav', '.m4a')
 
 def is_audio_file(filename: str) -> bool:
     """Return True if the file is a supported audio file."""
