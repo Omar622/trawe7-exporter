@@ -1,0 +1,22 @@
+[project]
+name = "trawe7_exporter"
+version = "0.1.0"
+description = "Taraweeh Cutter: desktop app for cutting and exporting Taraweeh prayer recordings."
+authors = [{ name = "Omar", email = "omaramin622@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "ffmpeg-python",
+    "ttkbootstrap>=1.20",
+    "Pillow>=10",
+    "arabic-reshaper>=3.0.1",
+    "python-bidi>=0.6.11",
+]
+
+[project.optional-dependencies]
+playback = ["pygame"]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.uv]
